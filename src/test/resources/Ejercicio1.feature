@@ -3,19 +3,22 @@ Feature: Create and update a user in Todo.ly
 
     Given uso autentificacion none
     When uso request POSTSINH al url /api/user.json con el json
+
     """
     {
-    "Email":"segundoParcialooRodriViladegut@upb.com",
+    "Email":"segundoExamenRodriViladegut@upb.com",
     "FullName":"Rodrigo Viladegut",
     "Password":"12345"
     }
     """
+
     Then el codigo de respuesta 200
+
     And el body esperado deberia ser
     """
     {
     "Id": "IGNORE",
-    "Email": "segundoParcialooRodriViladegut@upb.com",
+    "Email": "segundoExamenRodriViladegut@upb.com",
     "Password": null,
     "FullName": "Rodrigo Viladegut",
     "TimeZone": 0,
@@ -29,10 +32,11 @@ Feature: Create and update a user in Todo.ly
     "TimeZoneId": "Pacific Standard Time"
     }
     """
-    When actualizo con el link /api/user.json con el usuario segundoParcialooRodriViladegut@upb.com y password 12345
+    When actualizo con el link /api/user.json con el usuario segundoExamenRodriViladegut@upb.com y password 12345
     """
     {
       "FullName": "Rodrigo Viladegut Update"
     }
     """
+
     Then el codigo de respuesta 200
