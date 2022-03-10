@@ -8,7 +8,7 @@ public class FactoryRequest {
             case "post":
                 request= new RequestPOST();
                 break;
-            case "posth":
+            case "postsinh":
                 request= new RequestPOSTSinHeaders();
                 break;
             case "put":
