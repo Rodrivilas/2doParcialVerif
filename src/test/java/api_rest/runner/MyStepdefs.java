@@ -12,6 +12,8 @@ import io.restassured.response.Response;
 import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
+
+import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 public class MyStepdefs {
@@ -80,5 +82,13 @@ public class MyStepdefs {
         dynamicVar.put(nameVariable,response.then().extract().path(attribute)+"");
     }
 
+    @And("recivo el {} guardado en {}")
+    public void reciboElTokenStringGuardadoEnToken(String property, String varName) {
+        dynamicVar.put(varName,response.then().extract().path(property)+"");
+    }
 
+    @When("delete con {} a {}")
+    public void deleteConTOKENAApiAuthenticationTokenJson(String tokenValue, String url) {
+        response = given().header("Token", replaceVar(tokenValue)).when().delete(Configuration.host+url);
+    }
 }

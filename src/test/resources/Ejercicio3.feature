@@ -16,3 +16,13 @@ Feature: Create a Token and then delete the Token
     "ExpirationTime": "IGNORE"
 }
     """
+    When delete con TOKEN a /api/authentication/token.json
+    Then el codigo de respuesta 200
+    And el body esperado deberia ser
+    """
+    {
+    "TokenString": TOKEN,
+    "UserEmail": "rodriviladegut@gmail.com",
+    "ExpirationTime": "IGNORE"
+    }
+    """
