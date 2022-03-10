@@ -2,7 +2,7 @@ package testEjercicioCUDProject;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import pages.*;
+import pagesTodoist.*;
 
 public class CUDproject extends BaseTodoist {
     HomePage homePage= new HomePage();

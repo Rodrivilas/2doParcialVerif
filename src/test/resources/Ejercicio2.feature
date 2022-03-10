@@ -5,7 +5,7 @@ Feature: Create and update a user in Todo.ly
     When uso request POST al url /api/projects.json con el json
     """
     {
-    "Content":"RodriProjectoo",
+    "Content":"RodriProject",
     "Icon":4
     }
     """
@@ -14,7 +14,7 @@ Feature: Create and update a user in Todo.ly
     """
     {
         "Id": "IGNORE",
-        "Content": "RodriProjectoo",
+        "Content": "RodriProject",
         "ItemsCount": 0,
         "Icon":4,
         "ItemType": "IGNORE",
@@ -38,7 +38,7 @@ Feature: Create and update a user in Todo.ly
     When uso request POST al url /api/items.json con el json
     """
     {
-    "Content":"RodriVItemoo",
+    "Content":"RodriVItem",
     "ProjectId": Id_proj
     }
     """
@@ -47,7 +47,7 @@ Feature: Create and update a user in Todo.ly
     """
     {
         "Id": "IGNORE",
-        "Content": "RodriVItemoo",
+        "Content": "RodriVItem",
         "ItemType": "IGNORE",
         "Checked": false,
         "ProjectId": Id_proj,

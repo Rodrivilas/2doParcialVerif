@@ -1,4 +1,4 @@
-package pages;
+package pagesTodoist;
 
 import control.Button;
 import org.openqa.selenium.By;

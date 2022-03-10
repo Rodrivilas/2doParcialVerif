@@ -2,9 +2,9 @@ package testEjercicioRecuperatorio;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.UserMenu;
+import pagesTodoist.HomePage;
+import pagesTodoist.LoginPage;
+import pagesTodoist.UserMenu;
 
 public class LoginTest extends BaseTodoist {
     HomePage homePage= new HomePage();
